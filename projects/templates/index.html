@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% load static%}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+  <div class="row">
+      <style>
+        .pic{
+          height: 500px;
+          width: 200px;
+        }
+      </style>
+
+
+  <div class="row">
+    {% for post in projects %}
+    <div class="cards col-md-4">
+      <h5 class="text-center" style="color:blanchedalmond"> {{post.title}}</h5>
+      <a href="{% url 'projects' post.id %}"><img src="{{post.image.url}}" class="img-responsive thumbnail" alt="Project" width="350px" , height="400px"></a>
+
+    </div>
+    {% endfor %}
+  </div>
+  <br><br>
+  <div class="row">
+
+  </div>
+</div>
+
+
+</div>
+
+{% endblock %}
