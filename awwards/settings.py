@@ -80,33 +80,15 @@ WSGI_APPLICATION = 'awwards.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# DATABASES = {
-#     # 'default': {
-#     #      'ENGINE': 'django.db.backends.postgresql',
-#     #     'NAME': 'awward',
-#     #     'USER': 'moringa',
-#     # 'PASSWORD':'@young',
-#     # 'port':'5432'
-#     # }
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', 'ddtf3tfiv4stic'),
-        'USER': os.environ.get('DB_USER', 'etjmiflnnjyofh'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', '56a3077599a74f962feae448ce390ab6afa282f704a370e436060017ee94f599'),
-        'HOST': os.environ.get('DB_HOST', '@ec2-50-17-90-177.compute-1.amazonaws.com'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
-        'TEST': {
-            'NAME': 'test_projects'
-        }
-    },
-
+         'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'awward',
+        'USER': 'moringa',
+    'PASSWORD':'@young',
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
